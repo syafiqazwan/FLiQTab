@@ -1,0 +1,24 @@
+<ion-view cache-view="false" view-title="Service Status">
+    <ion-header-bar cache-view="false" class="bar-royal">
+       <center><h5> {{agName}} </h5></center>
+    </ion-header-bar>
+  <ion-content>
+    <div class="verticalLine" ng-style="loader">.</div>
+
+    <table class="table table-bordered table-striped table-hover">
+    	<tr>
+    		<th>Service</th>
+    		<th>Waiting</th>
+    		<th>Next Call</th>
+    		<th>Next Issue</th>
+    	</tr>
+        <tr ng-repeat="data in datas" class="info">
+            <td>{{data.mainSvc}}</td>
+            <td>{{data.tWaiting}}</td>
+            <td>{{data.qNextCall}}</td>
+            <td>{{data.qNextIssue}}</td>
+        </tr>
+    </table>
+
+  </ion-content>
+</ion-view>

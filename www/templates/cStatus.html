@@ -1,0 +1,27 @@
+<ion-view cache-view="false" view-title="Counter Status">
+    <ion-header-bar align-title="center" cache-view="false" class="bar-royal">
+       <center><h5> {{agName}} </h5></center>
+    </ion-header-bar>
+  <ion-content>
+
+    <div class="verticalLine" ng-style="loader">.</div>
+
+    <table class="table table-bordered table-striped table-hover">
+    	<tr>
+    		<th>Counter</th>
+    		<th>Status</th>
+    		<th>Waiting</th>
+    		<th>Serving</th>
+    	</tr>
+        <!-- Loop the row using ng-repeat, the data comes from the controller transferred using angular -->
+        <tr ng-repeat="data in datas" class="info">
+            <td>{{data.counter}}</td>
+            <td>{{data.status}}</td>
+            <td>{{data.qWaiting}}</td>
+            <td>{{data.crServing}}</td>
+        </tr>
+    </table>
+    <!-- <center><ion-spinner ng-show="loader" icon="ios-small"></ion-spinner></center> -->
+
+  </ion-content>
+</ion-view>

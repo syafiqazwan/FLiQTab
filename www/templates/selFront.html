@@ -1,0 +1,57 @@
+<ion-view cache-view="false" view-title="Queue Status">
+	<ion-header-bar align-title="center" cache-view="false" class="bar-royal">
+	   <center><h5> {{agName}} </h5></center>
+	</ion-header-bar>
+
+  <ion-content>
+    <!-- <h2><center> {{agName}} </center></h2> -->
+    <div class="verticalLine" ng-style="loader">.</div>
+    
+    <!-- Segment Display -->
+    <div class="card" ng-hide="hideSegment">
+    	<div class="item item-text-wrap">
+    		<center>
+    			<canvas id="display" width="130" height="70">
+				  Your browser is unfortunately not supported.
+				</canvas>
+    		</center>
+    	</div>
+    </div>
+
+	<!-- The result is controlled in the controller -->
+    <div class="card" ng-hide="hideRes">
+		<div class="item item-divider">
+			<center> <p class="cardHeader"> Queue Number Status </p> </center>
+		</div>
+		<div class="item item-text-wrap">
+			<p class="resTxt" ng-bind-html="result"></p>
+		</div>
+		<div class="item item-divider">
+			<form ng-submit="reEnterQnum()">
+				<button class="button button-block button-dark" type="submit"> Re-enter Queue Number </button>
+			</form>
+		</div>
+	</div>
+
+	<!--  -->
+    <form ng-submit="chckQueue()">
+    	<div class="card" ng-hide="hideForm">
+	        <div class="item item-divider">
+	          <center> <p class="cardHeader"> Check Queue Number </p> </center>
+	        </div>
+	        <div class="item item-text-wrap">
+	          <div class="list">
+	            <label class="item item-input">
+	            	<!--  -->
+	              <input type="number" class="inTxt" max="9999" ng-model="formData.qNum" ng-bind="qNum" placeholder="Enter Queue Number" required>
+	            </label>
+	          </div>
+	        </div>
+	        <div class="item item-divider">
+	          <button class="button button-block button-dark" type="submit"> Check </button>
+	        </div>
+	      </div>
+    </form>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+<!--
+Create tabs with an icon and label, using the tabs-positive style.
+Each tab's child <ion-nav-view> directive will have its own
+navigation history that also transitions its views in and out.
+-->
+
+<ion-tabs class="tabs-icon-top tabs-dark">
+
+  <!-- SelFront Tab -->
+  <ion-tab title="Main" icon-off="ion-ios-clock-outline" icon-on="ion-ios-clock" href="#/sel/selFront">
+    <ion-nav-view name="selFront"></ion-nav-view>
+  </ion-tab>
+
+  <!-- cStatus Tab -->
+  <ion-tab title="Counter Status" icon-off="ion-ios-browsers-outline" icon-on="ion-ios-browsers" href="#/sel/cStatus">
+    <ion-nav-view name="cStatus"></ion-nav-view>
+  </ion-tab>
+
+  <!-- svcStatus Tab -->
+  <ion-tab title="Service Status" icon-off="ion-ios-paper-outline" icon-on="ion-ios-paper" href="#/sel/svcStatus">
+    <ion-nav-view name="svcStatus"></ion-nav-view>
+  </ion-tab>
+
+  <!-- Back Tab -->
+  <ion-tab title="Home" icon-off="ion-ios-home-outline" icon-on="ion-ios-home" href="#/app/front">
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>

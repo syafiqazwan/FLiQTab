@@ -1,0 +1,59 @@
+<ion-view view-title="">
+  <ion-content>
+
+  	<center>logo fliq</center>
+  	<center> <i class="ion-bug"></i> </center>
+  	
+  	<div class="verticalLine" ng-style="loader">.</div>
+
+    <form ng-submit="submitNext()">
+	<div class="card">
+		<div class="item item-divider">
+			<center> <p class="cardHeader"> Select Category </p> </center>
+		</div>
+		<div class="item item-text-wrap">
+			<div class="list">
+				<label class="item item-input">
+					<!-- The dropdown is binded in the controller -->
+					<select id='xxx' ng-model='formData.xxx' required>
+						<option value=""> ---------------------------- </option>
+						<option value="hk"> Hospital & Klinik </option>
+						<option value="jpj"> JPJ </option>
+					</select> 
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="item item-divider">
+			<center> <p class="cardHeader"> Select Branch </p> </center>
+		</div>
+		<div class="item item-text-wrap">
+			<div class="list">
+				<label class="item item-input">
+					<!-- Dropdown yyy in binded to dropdown xxx, yyy is disabled until xxx is selected -->
+					<select id='yyy' ng-model='formData.yyy' required>
+						<option value=''> ---------------------------- </option>
+						<option class='hk' value='1'>Hospital Umum Sarawak</option>
+						<option class='hk' value='2'>Hospital Umum Miri</option>
+						<option class='hk' value='3'>Hospital Umum Bintulu</option>
+						<option class='jpj' value='4'>JPJ Wangsamaju</option>
+						<option class='jpj' value='5'>JPJ Bangi</option>
+						<option class='jpj' value='6'>JPJ Padang Jawa</option>
+						<option class='jpj' value='7'>JPJ UTC KL</option>
+					</select> 
+				</label>
+			</div>
+		</div>
+	</div>
+
+	<div class="card">
+		<div class="item item-divider">
+			<button class="button button-block button-dark" type="submit"> Next </button>
+		</div>
+	</div>
+	</form>
+
+  </ion-content>
+</ion-view>
